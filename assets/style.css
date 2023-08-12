@@ -131,13 +131,13 @@ header .navbar ul li a:hover{
 }
 .small-text {
   display: inline-block;
-  padding-right: -50px;
+  padding-right: 90px;
     font-weight: bold;  
   color: aliceblue;
   font-size: 20px;
   text-decoration: solid;
     letter-spacing: 0.3px;
-font-family: 'Courgette', cursive;
+    font-family: 'Nunito', sans-serif; 
   }
 .btn{
   padding: 1rem 3rem;
@@ -158,7 +158,8 @@ font-family: 'Courgette', cursive;
 }
 .animated {
     position: relative;
-    font-family: 'Nunito', sans-serif;  
+    font-family: 'Nunito', sans-serif; 
+    padding-right: 150px; 
   }
   
   .animated-info {
@@ -287,6 +288,9 @@ li {
   color: #eee;
   padding: 0 .5rem;
 
+}
+.download{
+  color:#eee;
 }
  
  .skills {
