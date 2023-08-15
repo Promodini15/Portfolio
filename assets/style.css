@@ -448,40 +448,17 @@ section.resume-section h3{
   section.resume-section .resume-item .resume-date{
     min-width:18rem
   }}
-  @media (min-width:992px){
-    section.resume-section{
-      padding-top:3rem;
-      padding-bottom:3rem}}
-      .bg-primary{
-        background-color:#bd5d38
-      }
-      .text-primary{
-        color:#bd5d38;
-      }
-      a{color:#bd5d38}
-      a:active,a:focus,a:hover{
-        color:#824027
-      }
-      .heading{
-font-family: 'Bebas Neue', sans-serif;
-letter-spacing: 0.25rem;
+  
 
-      }
-      .heading1{
-        font-family: 'Bebas Neue', sans-serif;
-        letter-spacing: 0.25rem; 
-       font-size: 30px;
-      }       
-
-/*portfolio*/
-.portfolio .box-container{
+/*project*/
+.project .box-container{
 display: flex;
 align-items: center;
 justify-content: center;
 flex-wrap: wrap;
 padding: 2 rem 0;
 }
-.portfolio .box-container .box{
+.project .box-container .box{
   height: 20rem;
   width: 26rem;
   border-radius: 1rem;
@@ -489,12 +466,12 @@ padding: 2 rem 0;
   overflow: hidden;
   cursor: pointer;
 }
-.portfolio .box-container .box img{
+.project .box-container .box img{
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
-.portfolio .box-container .box:hover img{
+.project .box-container .box:hover img{
   transform: scale(1.2);
 }
 
@@ -611,17 +588,7 @@ padding: 2 rem 0;
       width: 100%;
     }
     
-
-
-
-
-
-
-
-
-
-
- }/*
+ }
  @media (max-width: 767px) {
     h1 {
       font-size: 2.4em;
@@ -644,4 +611,3 @@ padding: 2 rem 0;
       margin-top: 0;
     }
 }
-*/
