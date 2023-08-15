@@ -30,7 +30,6 @@ function sendMail(){
     var params ={
         name:document.getElementById("name").value,
         email:document.getElementById("email").value,
-        project:document.getElementById("project").value,
         message:document.getElementById("message").value,
     };
 
@@ -42,7 +41,6 @@ emailjs.send(serviceID,templateID,params)
         document.getElementById("name").value="";
         document.getElementById("email").value="";
         document.getElementById("message").value="";
-        document.getElementById("project").value="",
         console.log(res);
         alert("Thankyou for contacting me");
     })
