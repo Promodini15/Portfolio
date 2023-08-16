@@ -1,6 +1,3 @@
-function downloadfile(){
-    window.open("C:\Users\Intertek Moody\Desktop\Promodini.L");
-}
 
 $(document).ready(function(){
 $('#menu').click(function(){
@@ -26,23 +23,40 @@ $('html,body').animate({
 });
 
 });
-function sendMail(){
-    var params ={
-        name:document.getElementById("name").value,
-        email:document.getElementById("email").value,
-        message:document.getElementById("message").value,
-    };
+function sendMail() {
+    var nameInput = document.getElementById("name");
+    var emailInput = document.getElementById("email");
+    var messageInput = document.getElementById("message");
+    
+    var name = nameInput.value;
+    var email = emailInput.value;
+    var message = messageInput.value;
 
-const serviceID="service_641q93p"
-const templateID="template_ok6vfy8";
-emailjs.send(serviceID,templateID,params)
-.then(
-    res =>{
-        document.getElementById("name").value="";
-        document.getElementById("email").value="";
-        document.getElementById("message").value="";
-        console.log(res);
-        alert("Thankyou for contacting me");
-    })
-    .catch((err) => console.log(err));
+    if (name !== "" && email !== "" && message !== "") {
+        var params = {
+            name: name,
+            email: email,
+            message: message,
+        };
+
+        const serviceID = "service_641q93p";
+        const templateID = "template_ok6vfy8";
+
+        emailjs.send(serviceID, templateID, params)
+            .then(function (response) {
+                console.log("Email sent successfully:", response);
+                nameInput.value = "";
+                emailInput.value = "";
+                messageInput.value = "";
+                alert("Thank you for contacting me");
+            })
+            .catch(function (error) {
+                console.log("Email sending failed:", error);
+                alert("An error occurred while sending the email");
+            });
+    } else {
+        alert("Please fill in all fields before submitting.");
+    }
 }
+
+
