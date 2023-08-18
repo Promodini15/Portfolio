@@ -443,13 +443,7 @@ section.resume-section h3{
 .text-md-right {
   text-align: right;
 }
-@media (min-width:768px){
-  section.resume-section{
-    min-height:100vh
-  }
-  section.resume-section .resume-item .resume-date{
-    min-width:18rem
-  }}
+
   
 
 /*portfolio*/
@@ -467,15 +461,45 @@ section.resume-section h3{
     margin: 2rem;
     overflow: hidden;
     cursor: pointer;
+    position: relative;
+  }
+  .box:hover .overlay {
+    opacity: 1;
   }
   .portfolio .box-container .box img{
     height: 100%;
     width: 100%;
     object-fit: cover;
   }
-  .portfolio .box-container .box:hover img{
-    transform: scale(1.2);
-  }
+ 
+ .portfolio .text{
+    color: rgb(241, 231, 231);
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  
+ }
+ .portfolio .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity:0;
+  transition: .5s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.box:hover .overlay {
+  opacity: 1; 
+}
+
 /*contact me*/
 .contact .row{
   display: flex;
@@ -638,6 +662,13 @@ section.resume-section h3{
 		color: white;
 	}
 }
+@media (min-width:768px){
+  section.resume-section{
+    min-height:100vh
+  }
+  section.resume-section .resume-item .resume-date{
+    min-width:18rem
+  }}
 
 /*
 
