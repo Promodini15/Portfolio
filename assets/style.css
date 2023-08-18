@@ -621,12 +621,12 @@ section.resume-section h3{
 	.about .row .skill-item .progress {
 		width: 100%;
 		height: 20px;
-		background-color: white; /* Set background color to white */
+		background-color: white; 
 		border-radius: 4px;
-		overflow: hidden; /* Hide overflowing content */
+		overflow: hidden; 
 	}
 	.about .row .skill-item .progress-in {
-		width: var(--progress); /* Use the custom property for width */
+		width: var(--progress); 
 		height: 100%;
 		background-color: var(--yellow);
 		border-radius: 4px;

@@ -24,13 +24,10 @@ $('html,body').animate({
 
 });
 function sendMail() {
-    var nameInput = document.getElementById("name");
-    var emailInput = document.getElementById("email");
-    var messageInput = document.getElementById("message");
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
     
-    var name = nameInput.value;
-    var email = emailInput.value;
-    var message = messageInput.value;
 
     if (name !== "" && email !== "" && message !== "") {
         var params = {
