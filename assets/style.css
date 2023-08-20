@@ -569,33 +569,38 @@ section.resume-section h3{
 /*media queries */
 @media (max-width: 768px) {
   .about .row {
-    flex-direction: column;
+   flex-direction:column;
     align-items: center;
   }
 
   .about .row .info {
-    padding: 2rem;
-    text-align: center;
+   padding: 2rem;
+   align-items: center;
+   margin-bottom: auto;
+    
   }
 
   .about .row .skills {
-    padding: 2rem;
+    padding: -100px 10rem;
     text-align: center;
   }
 
   .about .row .skill-item {
     width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom:auto;
   }
 
   .about .row .skill-item .progress {
     width: 100%;
+    height: 10px;
+    padding-top: 10px;
   }
 
   .about .row .skill-percent {
-    position: relative;
-    margin-top: 5px;
-    text-align: center;
+    position:relative;
+    margin-top: 3px;
+    padding-top: 5px;
+    text-align:center;
     color: white;
   }
 }
