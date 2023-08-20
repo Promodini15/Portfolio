@@ -107,6 +107,9 @@ header .navbar ul li a:hover{
     display: none;
 
 }
+.section {
+  padding: 100px 0; /* Adjust the padding as needed */
+}
 /*home styles*/
 
 .home{
@@ -115,6 +118,7 @@ header .navbar ul li a:hover{
     align-items: center;
     flex-flow: column;
     padding:0 15rem;
+
 
 }
 .home h3{
