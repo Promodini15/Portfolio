@@ -287,7 +287,7 @@ li {
   font-weight: normal;
 }
 .about .row .info h3 span{
-  color: #eee;
+  color:#eee;
   padding: 0 .5rem;
 
 }
@@ -567,7 +567,7 @@ section.resume-section h3{
 
 }
 /*media queries */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .about .row {
    flex-direction:column;
     align-items: center;
@@ -576,18 +576,20 @@ section.resume-section h3{
   .about .row .info {
    padding: 2rem;
    align-items: center;
-   margin-bottom: auto;
+   margin-bottom: 0;
+   padding-bottom: 0;
+   flex: 1 1 30rem;
     
   }
 
   .about .row .skills {
-    padding: -100px 10rem;
+    padding: 2rem;
     text-align: center;
   }
 
   .about .row .skill-item {
     width: 100%;
-    margin-bottom:auto;
+    margin-bottom:20px;
   }
 
   .about .row .skill-item .progress {
@@ -603,6 +605,7 @@ section.resume-section h3{
     text-align:center;
     color: white;
   }
+  
 }
 @media(max-width:1200px){
     html{
