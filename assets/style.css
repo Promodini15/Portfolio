@@ -567,7 +567,38 @@ section.resume-section h3{
 
 }
 /*media queries */
+@media (max-width: 768px) {
+  .about .row {
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .about .row .info {
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .about .row .skills {
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .about .row .skill-item {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .about .row .skill-item .progress {
+    width: 100%;
+  }
+
+  .about .row .skill-percent {
+    position: relative;
+    margin-top: 5px;
+    text-align: center;
+    color: white;
+  }
+}
 @media(max-width:1200px){
     html{
         font-size: 55%;
@@ -605,9 +636,9 @@ section.resume-section h3{
     .heading{
       margin: 0 3rem;
     }
-    .about .skills  .row .skill-item{
+   /* .about .skills  .row .skill-item{
       width: 100%;
-    }
+    }*/
     
  }
  @media (max-width: 767px) {
@@ -628,6 +659,7 @@ section.resume-section h3{
 		font-size: 30px;
 		padding-top: 0px;
 	}
+  /*
 	.about .row .info {
 		padding-left: 180px;
 	}
@@ -658,7 +690,7 @@ section.resume-section h3{
 		margin-top: 5px;
 		text-align: center;
 		color: white;
-	}
+	}*/
 }
 @media (min-width:768px){
   section.resume-section{
