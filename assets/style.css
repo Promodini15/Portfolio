@@ -96,7 +96,8 @@ header .navbar ul li a:hover{
 }
 #menu{
     position: fixed;
-    top:2rem;right:2rem;
+    top:2rem;
+    right:2rem;
     background: #333;
     color:#fff;
     cursor: pointer;
@@ -265,7 +266,6 @@ li {
   color: black; /* Set the icon color to black */
 }
 /*about*/
-
 .about .row{
     display: flex;
     flex-wrap: wrap;
@@ -532,8 +532,6 @@ section.resume-section h3{
 
 }
 
-
-
 .contact .row form .message{
   height:15rem;
   resize: none;
@@ -669,7 +667,14 @@ section.resume-section h3{
   section.resume-section .resume-item .resume-date{
     min-width:18rem
   }}
-
+@media (max-width:600px){
+  home{
+    width: 100%;
+  }
+  about{
+    width: 100%;
+  }
+}
 /*
 
 @media (max-width: 580px) {
