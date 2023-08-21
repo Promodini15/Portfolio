@@ -8,7 +8,7 @@
 
 
   :root{
-    --yellow:#333333;
+    --white:#FFFFFF;
 }
 *{
     
@@ -21,7 +21,7 @@
     transform: all .2s linear;    
 }
 *::selection{
-    background: var(--yellow);
+    background: var(--white);
     color:#FFFFFF;
 }
 html{
@@ -35,12 +35,21 @@ html::-webkit-scrollbar-track{
     background:#FFFFFF;
 }
 html::-webkit-scrollbar-thumb{
-    background:var(--yellow);
+    background:var(--white);
 }
 body{
-    background:#FFFFFF;
     overflow-x:hidden;
     padding-left: 35rem;
+}
+#video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 95%;
 }
 section{
     min-height: 100vh;
@@ -66,16 +75,16 @@ header .user img{
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1rem;
-    border:1rem solid var(--yellow);
+    border:1rem solid  #333;
 }
 header .user .name{
     font-size: 3.5rem;
-    color: #fff;
+    color: #FFFFFF;
 
 }
 header .user .post{
     font-size: 2rem;
-    color: #eee;
+    color:#FFFFFF
     
 }
 header .navbar{
@@ -98,7 +107,7 @@ header .navbar ul li a{
 
 }
 header .navbar ul li a:hover{
-    background-color:var(--yellow);
+    background-color:var(--white);
 }
 #menu{
     position: fixed;
@@ -133,13 +142,13 @@ header .navbar ul li a:hover{
 }
 .home h1{
   font-size: 5rem;
-  color: #333333;
+  color:#FFFFFF;
 }
 .home p{
   font-family: 'Lato', sans-serif;
   font-size: 1.8rem;
   padding: 1rem 0;
-  color: #333333;
+  color:#FFFFFF;
 
 }
 
@@ -147,7 +156,7 @@ header .navbar ul li a:hover{
   display: inline-block;
   padding-right: 90px;
     font-weight: bold;  
-  color: #333333;
+  color:#FFFFFF;
   font-size: 23px;
   text-decoration: solid;
     letter-spacing: 0.3px;
@@ -168,8 +177,10 @@ header .navbar ul li a:hover{
   font-size: 1.8rem;
 }
 .btn:hover{
-  background:var(--yellow);
+  background:white;
+  color: black;
 }
+
 .animated {
     position: relative;
     font-family: 'Open Sans', sans-serif;
@@ -185,7 +196,7 @@ header .navbar ul li a:hover{
   }
   
   .animated-item {
-    color: #001F3F;
+  color: #800000;
     font-family: 'Open Sans', sans-serif;  
   }
   
@@ -273,12 +284,17 @@ li {
 .navbar a{
   font-family:  'Open Sans', sans-serif; 
 }
+.navbar a:hover{
+  color: black;
+}
 .fa-circle {
   color: #800000; /* Set the desired color */
 }
 .list-social-icons a {
   color:white; /* Set the icon color to black */
 }
+
+
 /*about*/
 .about .row{
     display: flex;
@@ -296,19 +312,22 @@ li {
 }
 .about .row .info h3{
   font-size: 2rem;
-  color:#001F3F ;
+  color: #FFFFFF;
   padding: 1rem 0;
   font-weight: normal;
 }
 .about .row .info h3 span{
-  color:#eee;
+  color:#FFFFFF;
   padding: 0 .5rem;
 
 }
 .download{
-  color:#eee;
+  color:#FFFFFF;
 }
- 
+ .btn:hover a{
+  color: black;
+
+ }
  .skills {
   margin-top: -40px;
   flex: 0 0 40%;
@@ -350,7 +369,7 @@ li {
   margin-inline-end: 0px;
 }
 .skills .skill-item .progress {
-  background-color: white;
+  background-color:#333;
   height: 7px;
   border-radius: 4px;
   width: 100%;
@@ -365,14 +384,14 @@ li {
   top: 0;
   height: 100%;
   border-radius: 4px;
-  background-color: var(--yellow);
+  background-color: var(--white);
 }
 
 
  .skills .skill-item .skill-percent {
   position: absolute;
   right: 0;
-  color: var(--yellow);
+  color: var(--white);
   top: -40px;
   font-weight: 400;
 }
@@ -391,7 +410,7 @@ h2{
   font-family: 'Saira Extra Condensed',serif;
   font-weight: 700;
   text-transform: uppercase;
-  color:#eee;
+  color:#FFFFFF;
   line-height: 1.2;
   text-align: center;
 }
@@ -400,14 +419,16 @@ h2{
   font-weight: 500;
   font-family: 'Saira Extra Condensed',serif;
   font-size: 1.5rem;
-  color:rgb(150, 140, 140);
+  font-weight: bold;
+  color:rgb(211, 206, 206);
   
 }
 .score{
     margin-top: 0;
     margin-bottom: 1rem;
-    color:rgb(150, 140, 140);
+    color:rgb(211, 206, 206);
     font-size:13px;
+   font-weight: bold;
 }
 section.resume-section{
   padding-top:10rem;
@@ -559,15 +580,14 @@ section.resume-section h3{
   display: flex;
   align-items: center;
   font-size: 2rem;
-  color: #eee;
+  color: #FFFFFF;
   padding: 1rem 0;
   font-weight: normal;
-  text-transform:lowercase;
 }
 
 .contact .row .content .info h3 i{
   padding-right: 1rem;
-  color:var(--yellow);
+  color:var(--white);
 
 }
 
