@@ -24,7 +24,20 @@
    (function(){
       emailjs.init("-7BcEDaZbRezBAEot");
    })();
-   
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const homeSection = document.querySelector('#home');
+        const offsetTop = homeSection.getBoundingClientRect().top + window.pageYOffset;
+
+        window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+        });
+    });
+});
+
 </script>
   </head>
 <body>
@@ -130,7 +143,6 @@ $('html,body').animate({
           <h5>JAVA</h5>
           <div class="progress">
               <div class="progress-in" style="width:95%;">
-
               </div>
               <div class="skill-percent">
                   95%
