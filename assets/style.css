@@ -32,7 +32,7 @@ html::-webkit-scrollbar{
     width: 1.4rem;
 }
 html::-webkit-scrollbar-track{
-    background:#FFFFFF;
+    background:black;
 }
 html::-webkit-scrollbar-thumb{
     background:var(--white);
@@ -49,7 +49,7 @@ body{
   height: 100%;
   object-fit: cover;
   z-index: -1;
-  opacity: 95%;
+  
 }
 section{
     min-height: 100vh;
@@ -196,7 +196,7 @@ header .navbar ul li a:hover{
   }
   
   .animated-item {
-  color: #800000;
+  color: #f1e740;
     font-family: 'Open Sans', sans-serif;  
   }
   
@@ -555,7 +555,7 @@ section.resume-section h3{
 .contact .row form .box{
   padding: 1.5rem;
   margin: 1rem 0;
-  background:#3333;
+  background:rgba(112, 105, 105, 0.2);
   color:#fff;
   text-transform: none;
   font-size: 1.7rem;
