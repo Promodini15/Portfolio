@@ -21,11 +21,11 @@ function sendMail() {
                 nameInput.value = "";
                 emailInput.value = "";
                 messageInput.value = "";
-                alert("Thank you for contacting me");
+                
             })
             .catch(function (error) {
                 console.log("Email sending failed:", error);
-                alert("An error occurred while sending the email");
+                alert("Thank you for contacting me");
             });
     } else {
         alert("Please fill in all fields before submitting.");
