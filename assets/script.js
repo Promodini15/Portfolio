@@ -1,8 +1,11 @@
 function sendMail() {
+    console.log("function called");
     var name = document.getElementById("name").value;
     var email = document.getElementById("email").value;
     var message = document.getElementById("message").value;
-    
+    console.log("Name:", name);
+    console.log("Email:", email);
+    console.log("Message:", message);
 
     if (name !== "" && email !== "" && message !== "") {
         var params = {
@@ -16,6 +19,7 @@ function sendMail() {
 
         emailjs.send(serviceID, templateID, params)
             .then(function (response) {
+                console.log("send");
                 var successMessage = "Email sent successfully.\nResponse: " + JSON.stringify(response);
                 alert(successMessage);
                 nameInput.value = "";
@@ -24,6 +28,7 @@ function sendMail() {
                 
             })
             .catch(function (error) {
+                console.log("error ");
                 alert("Thank you for contacting me");
             });
     } else {
