@@ -1,3 +1,8 @@
+(function(){
+    console.log("EmailJS initialization...");
+      emailjs.init("dYdaNNJLGYCkzKA95");
+   })();
+
 function sendMail() {
     console.log("function called");
     var name = document.getElementById("name").value;
