@@ -16,7 +16,8 @@ function sendMail() {
 
         emailjs.send(serviceID, templateID, params)
             .then(function (response) {
-                alert("Email sent successfully:", response);
+                var successMessage = "Email sent successfully.\nResponse: " + JSON.stringify(response);
+                alert(successMessage);
                 nameInput.value = "";
                 emailInput.value = "";
                 messageInput.value = "";
