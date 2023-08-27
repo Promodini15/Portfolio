@@ -16,21 +16,6 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com/dist/email.min.js"></script>
-<script>
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        
-        const homeSection = document.querySelector('#home');
-        const offsetTop = homeSection.getBoundingClientRect().top + window.pageYOffset;
-
-        window.scrollTo({
-            top: offsetTop,
-            behavior: 'smooth'
-        });
-    });
-});
-</script>
 <header>
   <div class="user">
       <img src="./images/promodini.png" alt="" oncontextmenu="return false;">
@@ -300,6 +285,21 @@ $('html,body').animate({
 </div>
 
 </section>
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          
+          const homeSection = document.querySelector('#home');
+          const offsetTop = homeSection.getBoundingClientRect().top + window.pageYOffset;
+  
+          window.scrollTo({
+              top: offsetTop,
+              behavior: 'smooth'
+          });
+      });
+  });
+  </script>
 <script type="text/javascript">
   (function () {
       emailjs.init("dYdaNNJLGYCkzKA95");
