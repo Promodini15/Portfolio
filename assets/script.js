@@ -1,17 +1,31 @@
-(function(){
-    console.log("EmailJS initialization...");
-      emailjs.init("dYdaNNJLGYCkzKA95");
-   })();
-
 function sendMail() {
     console.log("function called");
+    var params={
+        name : document.getElementById("name").value,
+        email :document.getElementById("email").value,
+         message : document.getElementById("message").value,
+    };
+}
+const serviceID = "service_2pt0erj";
+const templateID = "template_ok6vfy8";
     var name = document.getElementById("name").value;
     var email = document.getElementById("email").value;
     var message = document.getElementById("message").value;
     console.log("Name:", name);
     console.log("Email:", email);
     console.log("Message:", message);
-
+    emailjs.send(serviceID, templateID, params)
+    .then(
+        res =>{
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("message").value = "";
+            console.log(res);
+            alert("your message sent successfully");
+        })
+        .catch((err) => console.log(err));
+    
+/*
     if (name !== "" && email !== "" && message !== "") {
         var params = {
             name: name,
@@ -19,7 +33,7 @@ function sendMail() {
             message: message,
         };
 
-        const serviceID = "service_641q93p";
+        const serviceID = "service_2pt0erj";
         const templateID = "template_ok6vfy8";
 
         emailjs.send(serviceID, templateID, params,function(response){
@@ -39,3 +53,4 @@ function sendMail() {
         alert("Please fill in all fields before submitting.");
     }
 }
+*/
