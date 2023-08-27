@@ -15,7 +15,7 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script type="text/javascript">
+    <script type="text/javascript"></script>
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
 </script>
 <script>
@@ -306,31 +306,24 @@ $('html,body').animate({
     emailjs.init("dYdaNNJLGYCkzKA95");
  })();
  function sendMail() {
-    console.log("function called");
-    var nameValue = document.getElementById("name").value;
-    var emailValue = document.getElementById("email").value;
-    var messageValue = document.getElementById("message").value;
+   console.log("function called");
+   var params={
+       name : document.getElementById("name").value,
+        email :document.getElementById("email").value,
+        message : document.getElementById("message").value,
+   };
 
-    if (nameValue && emailValue && messageValue) {
-        var params = {
-            name: nameValue,
-            email: emailValue,
-            message: messageValue,
-        };
-
-        const serviceID = "service_2pt0erj";
-        const templateID = "template_ok6vfy8";
-
-        emailjs.send(serviceID, templateID, params)
-            .then((res) => {
-                document.getElementById("form").reset();
-                alert("Your message has been sent successfully");
-            })
-            .catch((err) => console.log(err));
-    } else {
-        alert("Please fill in all fields before submitting.");
-    }
-}
+const serviceID = "service_2pt0erj";
+const templateID = "template_ok6vfy8";
+  
+   emailjs.send(serviceID, templateID, params)
+   .then((res) =>{
+       document.getElementById("form").reset();
+           alert("Your message has sent successfully");
+       })
+       .catch((err) => console.log(err));
+       
+     }
 </script>
 </body>
 </html>
