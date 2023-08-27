@@ -26,13 +26,13 @@ function sendMail() {
             console.log("send callback");
                 var successMessage = "Email sent successfully.\nResponse: " + JSON.stringify(response);
                 alert(successMessage);
-                nameInput.value = "";
-                emailInput.value = "";
-                messageInput.value = "";
+                document.getElementById("name").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("message").value = "";
                 
             },function(error){
                 console.log("error ");
-                alert("Thank you for contacting me");
+                alert("An error ocuured while sending the Email, Send Again");
             });
 }
     else {
