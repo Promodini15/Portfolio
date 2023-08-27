@@ -19,11 +19,6 @@
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
 </script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init("dYdaNNJLGYCkzKA95");
-   })();
-</script>
 <script>
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -299,16 +294,44 @@ $('html,body').animate({
       <h3><i class="fas fa-map-marker-alt"></i> Salem,India-636102</h3>
       </div>
   </div>
-<form id="form" onsubmit="sendMail();reset(); return false;">
+<form id="form" onsubmit="sendMail(); return false;">
   <input type="text" id="name" placeholder="name" class="box" required>
   <input type="email" id="email" placeholder="email" class="box" required>
   <textarea  id="message" cols="30" rows="10" class="box message" placeholder="message" required></textarea>
- <button type="submit" class="btn" onclick="sendMail()"> send <i class="fas fa-paper-plane"></i></button>
+ <button type="submit" class="btn" > send <i class="fas fa-paper-plane"></i></button>
 </form>
 </div>
 
 </section>
-
+<script type="text/javascript">
+  (function(){
+     emailjs.init("dYdaNNJLGYCkzKA95");
+  })();
+  function sendMail() {
+    console.log("function called");
+    var params={
+        name : document.getElementById("name").value,
+        email :document.getElementById("email").value,
+         message : document.getElementById("message").value,
+    };
+}
+const serviceID = "service_2pt0erj";
+const templateID = "template_ok6vfy8";
+   
+    emailjs.send(serviceID, templateID, params)
+    .then((res) =>{
+        document.getElementById("form").reset();
+        /*
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("message").value = "";
+            console.log(res);
+            */
+            alert("your message sent successfully");
+        })
+        .catch((err) => console.log(err));
+    
+</script>
 
     
 

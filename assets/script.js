@@ -1,4 +1,4 @@
-function sendMail() {
+/*function sendMail() {
     console.log("function called");
     var params={
         name : document.getElementById("name").value,
@@ -9,17 +9,19 @@ function sendMail() {
 const serviceID = "service_2pt0erj";
 const templateID = "template_ok6vfy8";
    
-    emailjs
-    .send(serviceID, templateID, params)
+    emailjs.send(serviceID, templateID, params)
     .then((res) =>{
+        document.getElementById("form").reset();
+        
             document.getElementById("name").value = "";
             document.getElementById("email").value = "";
             document.getElementById("message").value = "";
             console.log(res);
+            
             alert("your message sent successfully");
         })
         .catch((err) => console.log(err));
-    
+    */
 /*
     if (name !== "" && email !== "" && message !== "") {
         var params = {
