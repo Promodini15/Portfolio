@@ -17,23 +17,20 @@ function sendMail() {
         const serviceID = "service_641q93p";
         const templateID = "template_ok6vfy8";
 
-        emailjs.send(serviceID, templateID, params)
-            .then(function (response) {
-                console.log("send");
+        emailjs.send(serviceID, templateID, params,function(response){
+            console.log("send callback");
                 var successMessage = "Email sent successfully.\nResponse: " + JSON.stringify(response);
                 alert(successMessage);
                 nameInput.value = "";
                 emailInput.value = "";
                 messageInput.value = "";
                 
-            })
-            .catch(function (error) {
+            },function(error){
                 console.log("error ");
                 alert("Thank you for contacting me");
             });
-    } else {
+}
+    else {
         alert("Please fill in all fields before submitting.");
     }
 }
-
-
