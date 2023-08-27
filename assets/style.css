@@ -481,14 +481,14 @@ section.resume-section h3{
   
 
 /*portfolio*/
-.portfolio .box-container{
+.project .box-container{
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   padding: 2 rem 0;
   }
-  .portfolio .box-container .box{
+  .project .box-container .box{
     height: 20rem;
     width: 26rem;
     border-radius: 1rem;
@@ -500,13 +500,13 @@ section.resume-section h3{
   .box:hover .overlay {
     opacity: 1;
   }
-  .portfolio .box-container .box img{
+  .project .box-container .box img{
     height: 100%;
     width: 100%;
     object-fit: cover;
   }
  
- .portfolio .text{
+ .project .text{
     color: rgb(241, 231, 231);
     font-size: 20px;
     position: absolute;
@@ -518,7 +518,7 @@ section.resume-section h3{
     text-align: center;
   
  }
- .portfolio .overlay {
+ .project .overlay {
   position: absolute;
   top: 0;
   bottom: 0;
