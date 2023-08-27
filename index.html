@@ -321,13 +321,10 @@ const templateID = "template_ok6vfy8";
     emailjs.send(serviceID, templateID, params)
     .then((res) =>{
         document.getElementById("form").reset();
-            alert("your message sent successfully");
+            alert("Your message has sent successfully");
         })
         .catch((err) => console.log(err));
       }
 </script>
-
-    
-
 </body>
 </html>
