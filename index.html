@@ -302,5 +302,29 @@ $('html,body').animate({
 </form>
 </div>
 </section>
+<script>
+  (function(){
+    emailjs.init("dYdaNNJLGYCkzKA95");
+ })();
+ function sendMail() {
+   console.log("function called");
+   var params={
+       name : document.getElementById("name").value,
+        email :document.getElementById("email").value,
+        message : document.getElementById("message").value,
+   };
+
+const serviceID = "service_2pt0erj";
+const templateID = "template_ok6vfy8";
+  
+   emailjs.send(serviceID, templateID, params)
+   .then((res) =>{
+       document.getElementById("form").reset();
+           alert("Your message has sent successfully");
+       })
+       .catch((err) => console.log(err));
+       
+     }
+</script>
 </body>
 </html>
