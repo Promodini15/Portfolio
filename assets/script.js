@@ -24,7 +24,6 @@ function sendMail() {
                 
             })
             .catch(function (error) {
-                console.log("Email sending failed:", error);
                 alert("Thank you for contacting me");
             });
     } else {
