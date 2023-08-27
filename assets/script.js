@@ -16,6 +16,7 @@ function sendMail() {
 
         emailjs.send(serviceID, templateID, params)
             .then(function (response) {
+                console.log("Inside 'then' block");
                 console.log("Email sent successfully:", response);
                 nameInput.value = "";
                 emailInput.value = "";
