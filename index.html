@@ -321,7 +321,9 @@ $('html,body').animate({
       emailjs.send(serviceID, templateID, params)
           .then((res) => {
               document.getElementById("form").reset();
+              console.log("Before alert");
               alert("Your message was sent successfully");
+              console.log("After alert");
           })
           .catch((err) => console.log(err));
   }
